@@ -1,0 +1,92 @@
+nav {
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+nav ul li a {
+    color: #000 !important;
+}
+
+nav ul li a:hover {
+    color: #fb4226 !important;
+}
+
+.slide .carousel-inner .slide0 {
+    background-image: url(/img/banner0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.slide .carousel-inner .slide1 {
+    background-image: url(/img/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.slide .carousel-inner .slide2 {
+    background-image: url(/img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.slide .carousel-inner .slide3 {
+    background-image: url(/img/banner3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.slide .carousel-inner .slide4 {
+    background-image: url(/img/banner4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.slide .carousel-indicators li {
+    width: 0.83rem;
+    height: 0.83rem;
+    margin: 0.25rem;
+    border-radius: 50%;
+    background-color: #6c757d !important;  /* muted */
+}
+
+.slide .carousel-indicators li.active {
+    background-color: #fb4226 !important;
+}
+
+.slide .play-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.slide .play-center i {
+    font-size: 5rem;
+    color: #fff;    
+}
+
+.slide #booking {
+    position: absolute;
+    left: 50%;
+    bottom: -4.5rem;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+.slide #booking.container {
+    padding: 0 !important;
+}
+
+#intro .tab-content .card:hover img {
+    filter: grayscale(80%);
+}
+
+#intro2 .container .phim .roll {
+    max-height: 800px;
+    overflow: auto;
+}
