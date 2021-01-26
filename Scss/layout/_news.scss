@@ -1,0 +1,60 @@
+#news {
+  padding-bottom: 3rem;
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+  h5 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  h5:hover {
+    color: #e9572b;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+  .item img {
+    width: 1.25rem;
+    margin: 0.75rem;
+    transition: all 0.2s;
+  }
+  .item img:hover {
+    cursor: pointer;
+    width: 1.325rem;
+  }
+  .item {
+    color: #b2b2b2;
+  }
+  .list {
+    img {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    p:hover {
+      color: #e9572b;
+      cursor: pointer;
+    }
+  }
+  button {
+    color: #b2b2b2;
+    border: 1px solid #b2b2b2;
+    padding: 0.5rem 1.785rem;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #e9572b;
+    color: #fff;
+  }
+  @include tab();
+}

@@ -1,775 +1,1525 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>TIX - Nhóm 10</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./slick.css" />
+    <link rel="stylesheet" href="./slick-theme.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/style_NhuY.css">
-</head>
+    <link rel="stylesheet" href="./CSS/style_NhuY.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <head>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-0 ly-0">
-
-            <a class="navbar-brand py-0 my-0 " href="#">
-                <img src="/img/tix-logo.png" alt="logo" height="50px">
-            </a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top my-0 ly-0"
+      >
+        <a class="navbar-brand py-0 my-0" href="#">
+          <img src="/img/tix-logo.png" alt="logo" height="50px" />
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button> -->
 
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item ml-5 mr-2">
-                        <a class="nav-link" href="#">Lịch chiếu</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Cụm rạp</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Tin Tức</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Ứng dụng</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item ml-5 mr-2">
+              <a class="nav-link" href="#">Lịch chiếu</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Cụm rạp</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Tin Tức</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Ứng dụng</a>
+            </li>
+          </ul>
+        </div>
 
-
-            <a href="" class="border-right pr-1 py-2 pr-3 text-muted text-decoration-none"><i
-                    class="fas fa-user pr-2"></i>Đăng
-                nhập</a>
-            <a href="" class="pl-3 text-muted text-decoration-none"><i class="fas fa-map-marker-alt pr-1"></i>
-                <select name="gps" id="gps" class="border-0 text-muted">
-                    <option value="HCM">Hồ Chí Minh</option>
-                </select>
-            </a>
-
-        </nav>
+        <a
+          href=""
+          class="border-right pr-1 py-2 pr-3 text-muted text-decoration-none"
+          ><i class="fas fa-user pr-2"></i>Đăng nhập</a
+        >
+        <a href="" class="pl-3 text-muted text-decoration-none"
+          ><i class="fas fa-map-marker-alt pr-1"></i>
+          <select name="gps" id="gps" class="border-0 text-muted">
+            <option value="HCM">Hồ Chí Minh</option>
+          </select>
+        </a>
+      </nav>
     </head>
 
     <section id="slide" class="position-relative">
-        <div id="demo" class="carousel slide" data-ride="carousel">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators pb-5">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+          <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators pb-5">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
-                <li data-target="#demo" data-slide-to="4"></li>
-            </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner position-relative">
-                <div class="carousel-item active slide0">
-                    <img src="" alt="">
-                </div>
-                <div class="carousel-item slide1">
-                    <img src="" alt="">
-                </div>
-                <div class="carousel-item slide2">
-                    <img src="" alt="">
-                </div>
-                <div class="carousel-item slide3">
-                    <img src="" alt="">
-                </div>
-                <div class="carousel-item slide4">
-                    <img src="" alt="">
-                </div>
-            </div>
-
-            <!-- Play -->
-            <div class="play-center">
-                <i class="far fa-play-circle"></i>
-            </div>
-
-            <!-- Booking -->
-            <div id="booking" class="container position-absolute bg-white rounded d-none d-xl-block">
-                <div class="row py-3 mx-0 align-items-center justify-content-center">
-                    <div class="col ml-5">
-                        <div class="item border-right pr-1 py-2">
-                            <select name="chon-phim" id="chon-phim" class="w-100 border-0">
-                                <option value="phim" id="0">Phim</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="item border-right pr-1 py-2">
-                            <select name="rap-phim" id="rap-phim" class="w-100 border-0">
-                                <option value="rap" id="0">Rạp</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="item border-right pr-1 py-2">
-                            <select name="ngay-xem" id="ngay-xem" class="w-100 border-0">
-                                <option value="date" id="0">Ngày xem</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="item border-right pr-1 py-2">
-                            <select name="xuat-chieu" id="xuat-chieu" class="w-100 border-0">
-                                <option value="time" id="0">Xuất chiếu</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-dark text-white">MUA VÉ NGAY</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-
+        <!-- The slideshow -->
+        <div class="carousel-inner position-relative">
+          <div class="carousel-item active slide0">
+            <img src="" alt="" />
+          </div>
+          <div class="carousel-item slide1">
+            <img src="" alt="" />
+          </div>
+          <div class="carousel-item slide2">
+            <img src="" alt="" />
+          </div>
+          <div class="carousel-item slide3">
+            <img src="" alt="" />
+          </div>
+          <div class="carousel-item slide4">
+            <img src="" alt="" />
+          </div>
         </div>
+
+        <!-- Play -->
+        <div class="play-center">
+          <i class="far fa-play-circle"></i>
+        </div>
+
+        <!-- Booking -->
+        <div
+          id="booking"
+          class="container position-absolute bg-white rounded d-none d-xl-block"
+        >
+          <div class="row py-3 mx-0 align-items-center justify-content-center">
+            <div class="col ml-5">
+              <div class="item border-right pr-1 py-2">
+                <select name="chon-phim" id="chon-phim" class="w-100 border-0">
+                  <option value="phim" id="0">Phim</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="item border-right pr-1 py-2">
+                <select name="rap-phim" id="rap-phim" class="w-100 border-0">
+                  <option value="rap" id="0">Rạp</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="item border-right pr-1 py-2">
+                <select name="ngay-xem" id="ngay-xem" class="w-100 border-0">
+                  <option value="date" id="0">Ngày xem</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="item border-right pr-1 py-2">
+                <select
+                  name="xuat-chieu"
+                  id="xuat-chieu"
+                  class="w-100 border-0"
+                >
+                  <option value="time" id="0">Xuất chiếu</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <button class="btn btn-dark text-white">MUA VÉ NGAY</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
     </section>
 
     <section id="intro">
-        <div class="container my-5 py-5">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active text-decoration-none h4 text-danger" data-toggle="pill"
-                        href="#dang-chieu">Đang
-                        Chiếu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-decoration-none h4 text-secondary" data-toggle="pill" href="#sapchieu">Sắp
-                        Chiếu</a>
-                </li>
-            </ul>
+      <div class="container my-5 py-5">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link active text-decoration-none h4 text-danger"
+              data-toggle="pill"
+              href="#dang-chieu"
+              >Đang Chiếu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-decoration-none h4 text-secondary"
+              data-toggle="pill"
+              href="#sapchieu"
+              >Sắp Chiếu</a
+            >
+          </li>
+        </ul>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane container active" id="dang-chieu">
-                    <div class="row mt-4">
-                        <div class="col-3">
-                            <div class="card border-0">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-1">C18</button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card border-0 ">
-                                <img class="card-img-top rounded" src="/img/phim1.png" alt="">
-                                <div class="card-body px-0">
-                                    <p class="card-title h5 mb-1">
-                                        <button class="btn btn-danger btn-sm mr-2"><b>C18</b></button>
-                                        Chị Mười Ba: 3 ngày sinh tử (C18)
-                                    </p>
-                                    <span class="card-text">100 phút</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane container active" id="dang-chieu">
+            <div class="row mt-4">
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-1">C18</button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
                 </div>
-
-                <div class="tab-pane container fade" id="sapchieu">
-                    <p class="text-center"> Comming Soon ... </p>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
                 </div>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card border-0">
+                  <img
+                    class="card-img-top rounded"
+                    src="/img/phim1.png"
+                    alt=""
+                  />
+                  <div class="card-body px-0">
+                    <p class="card-title h5 mb-1">
+                      <button class="btn btn-danger btn-sm mr-2">
+                        <b>C18</b>
+                      </button>
+                      Chị Mười Ba: 3 ngày sinh tử (C18)
+                    </p>
+                    <span class="card-text">100 phút</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
 
+          <div class="tab-pane container fade" id="sapchieu">
+            <p class="text-center">Comming Soon ...</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="intro2">
-        <div class="container py-5">
-            <div class="row phim">
-                <div class="col-2 col-sm-1 border">
-                    <div class="item py-3 border-bottom">
-                        <img src="/img/intro2-1.png" alt="" class="w-100">
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <img src="/img/intro2-1.png" alt="" class="w-100">
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <img src="/img/intro2-1.png" alt="" class="w-100">
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <img src="/img/intro2-1.png" alt="" class="w-100">
-                    </div>
-                    <div class="item py-3">
-                        <img src="/img/intro2-1.png" alt="" class="w-100">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-5 border">
-                    <div class="item py-3 border-bottom d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                    <div class="item py-3 d-flex">
-                        <div class="col-2">
-                            <img src="/img/intro2-2.png" alt="" class="w-100">
-                        </div>
-                        <div class="col-10">
-                            <span class="text-success">BHD Star</span>
-                            <span class="d-inline">- Bitexco</span>
-                            <p class="mb-0 text-muted">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
-                            <p class="text-danger mb-0">[chit tiết]</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 border roll">
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item py-3 border-bottom">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="/img/intro2-3.png" alt="" class="w-100">
-                            </div>
-                            <div class="col-10">
-                                <button class="btn btn-success btn-sm"> P </button>
-                                <span>Cuộc sống nhiệm màu - Soul -</span>
-                                <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8 </p>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="pt-2">2D Digital</h5>
-                                <div class="row">
-                                    <div class="col-3 pl-3 pr-1">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 px-2">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-3 pl-1 pr-3">
-                                        <button class="btn btn btn-light border">
-                                            <span class="text-success h6">16:00</span>
-                                            <span class="text-muted">~17:40</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+      <div class="container py-5">
+        <div class="row phim">
+          <div class="col-2 col-sm-1 border">
+            <div class="item py-3 border-bottom">
+              <img src="/img/intro2-1.png" alt="" class="w-100" />
             </div>
+            <div class="item py-3 border-bottom">
+              <img src="/img/intro2-1.png" alt="" class="w-100" />
+            </div>
+            <div class="item py-3 border-bottom">
+              <img src="/img/intro2-1.png" alt="" class="w-100" />
+            </div>
+            <div class="item py-3 border-bottom">
+              <img src="/img/intro2-1.png" alt="" class="w-100" />
+            </div>
+            <div class="item py-3">
+              <img src="/img/intro2-1.png" alt="" class="w-100" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-5 border">
+            <div class="item py-3 border-bottom d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+            <div class="item py-3 d-flex">
+              <div class="col-2">
+                <img src="/img/intro2-2.png" alt="" class="w-100" />
+              </div>
+              <div class="col-10">
+                <span class="text-success">BHD Star</span>
+                <span class="d-inline">- Bitexco</span>
+                <p class="mb-0 text-muted">
+                  L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                </p>
+                <p class="text-danger mb-0">[chit tiết]</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 border roll">
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-3 border-bottom">
+              <div class="row">
+                <div class="col-2">
+                  <img src="/img/intro2-3.png" alt="" class="w-100" />
+                </div>
+                <div class="col-10">
+                  <button class="btn btn-success btn-sm">P</button>
+                  <span>Cuộc sống nhiệm màu - Soul -</span>
+                  <p class="mb-0 text-muted">100 phút - TIX9 - IMDb8</p>
+                </div>
+                <div class="col-12">
+                  <h5 class="pt-2">2D Digital</h5>
+                  <div class="row">
+                    <div class="col-3 pl-3 pr-1">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 px-2">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                    <div class="col-3 pl-1 pr-3">
+                      <button class="btn btn btn-light border">
+                        <span class="text-success h6">16:00</span>
+                        <span class="text-muted">~17:40</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
+
+    <!-- Phu -->
+    <section id="news">
+      <div class="container pt-3 text-center">
+        <div class="bg"></div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#dienanh24h"
+              >Điện Ảnh 24h</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#review">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#khuyenmai"
+              >Khuyến Mãi</a
+            >
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane container active" id="dienanh24h">
+            <div class="row text-left">
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/boc-tem-to-hop-giai-tri-moi-toanh-cua-gioi-ha-thanh-16056938333773.jpg"
+                  alt="boc-tem-to-hop-giai-tri-moi-toanh-cua-gioi-ha-thanh"
+                />
+                <h5>“Bóc tem” tổ hợp giải trí mới toanh của giới Hà Thành</h5>
+                <p>
+                  Vào đúng ngày Nhà giáo Việt Nam 20/11, khu vui chơi sống ảo
+                  độc-lạ-chill nhất từ trước đến giờ sẽ chính thức khai trương
+                  tại 360 Giải Phóng!
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />1
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/tiec-trang-mau-chinh-thuc-can-moc-100-ty-chi-sau-2-tuan-cong-chieu-16043752411629.png"
+                  alt="tiec-trang-mau-blood-moon-party"
+                />
+                <h5>
+                  Tiệc Trăng Máu chính thức cán mốc 100 tỷ chỉ sau 2 tuần công
+                  chiếu
+                </h5>
+                <p>
+                  Sau 2 tuần ra mắt, Tiệc Trăng Máu chính thức gia nhập câu lạc
+                  bộ phim điện ảnh đạt 100 tỷ đồng doanh thu phòng vé. Dàn ngôi
+                  sao “bạc tỷ” của phim cũng lần đầu tiên hội tụ đầy đủ trong
+                  một khung hình để ăn mừng thành tích ấn tượng của tác phẩm.
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />2
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+            </div>
+            <div class="row text-left">
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/ngo-thanh-van-chinh-thuc-khoi-dong-cuoc-thi-thiet-ke-trang-phuc-cho-sieu-anh-hung-dau-tien-cua-viet-nam-vinaman-16041597587981.jpg"
+                  alt="ngo-thanh-van-chinh-thuc-khoi-dong-cuoc-thi-thiet-ke-trang-phuc-cho-sieu-anh-hung-dau-tien-cua-viet-nam-vinaman"
+                />
+                <h5>
+                  NGÔ THANH VÂN CHÍNH THỨC KHỞI ĐỘNG CUỘC THI THIẾT KẾ TRANG
+                  PHỤ...
+                </h5>
+                <p>
+                  Chiều tối ngày 30-10-2020, Ngô Thanh Vân và Studio68 đã chính
+                  thức phát động cuộc thi thiết kế trang phục cho siêu anh hùng
+                  VINAMAN với tổng
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />2
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang-16045678023913.png"
+                  alt="antebellum"
+                />
+                <h5>
+                  [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                  Antebellum: Bẫy Thực Tại Kinh Hoàng
+                </h5>
+                <p>
+                  Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác những
+                  mảng tối của xã hội trên nền một câu chuyện kinh dị, có sự
+                  tham gia của nhà sản xuất
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />1
+                  <img src="./img/comment.png" alt="comment" />1
+                </div>
+              </div>
+              <div class="col-4 pb-3">
+                <div class="list d-flex">
+                  <img src="./img/default-trailer.webp" alt="ac-quy-doi-dau" />
+                  <p>
+                    Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng...
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/da-n-my-nhan-trong-the-gio-i-die-n-a-nh-cu-a-qua-i-kie-t-christopher-nolan-15970503793246.png"
+                    alt="reviwspiderman"
+                  />
+                  <p>
+                    Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                    Christopher...
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/truy-cung-giet-tan-cuoc-tai-ngo-cua-hai-ong-hoang-phong-ve-xu-han-15966122262210.png"
+                    alt="truy-cung-giet-tan-cuoc-tai-ngo-cua-hai-ong-hoang-phong-ve-xu-han"
+                  />
+                  <p>
+                    Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng
+                    phòng...
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/6-da-o-die-n-ti-do-lam-nen-thanh-cong-cua-nhu-ng-bom-ta-n-di-nh-da-m-nha-t-hollywood-15966023547553.png"
+                    alt="6-dao-dien-ti-do-lam-nen-thanh-cong-cua-nhung-bom-tan-dinh-dam-nhat-hollywood"
+                  />
+                  <p>
+                    6 đạo diễn tỉ đô làm nên thành công của những bom tấn đình
+                    đám nhất Hollywood
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container fade" id="review">
+            <div class="row text-left pb-3">
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket-15965255784224.png"
+                  alt="review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket"
+                />
+                <h5>
+                  Review: Tàn Tích Quỷ Ám (Relic) - Ba thế hệ và mối liên kết
+                </h5>
+                <p>
+                  Điểm nhấn của phim kinh dị năm 2020 chính là Tàn Tích Quỷ Ám
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />0
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/review-dinh-thu-oan-khuat-ghost-of-war-15965120886610.png"
+                  alt="review-dinh-thu-oan-khuat-ghost-of-war"
+                />
+                <h5>Review: Dinh Thự Oan Khuất (Ghost Of War)</h5>
+                <p>
+                  Tuy là một bộ phim có chất lượng tốt, nhưng có vẻ Dinh Thự Oan
+                  Khuất vẫn chưa đủ để đem khán giả trở lại phòng vé!
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />0
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+            </div>
+            <div class="row text-left">
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/blackkklansman-coc-nuoc-lanh-de-nguoi-my-thuc-tinh-15910862294165.png"
+                  alt="blackkklansman"
+                />
+                <h5>‘BlacKkKlansman’ - cốc nước lạnh để người Mỹ thức tỉnh</h5>
+                <p>
+                  Tác phẩm nhận đề cử Phim truyện xuất sắc tại Oscar 2019 của
+                  đạo diễn Spike Lee là một lát cắt nữa về nạn phân biệt chủng
+                  tộc - nỗi đau gây nhức
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />0
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/american-sniper-chinh-nghia-hay-phi-nghia-15905660338111.png"
+                  alt="american-sniper"
+                />
+                <h5>American Sniper - Chính nghĩa hay phi nghĩa?</h5>
+                <p>
+                  American Sniper khắc họa một tay súng bắn tỉa “huyền thoại”
+                  của Hải quân Mỹ với 4 lần tham chiến ở Trung Đông. Câu chuyện
+                  phim chậm rãi đưa người
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />0
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/review-spider-man-into-the-spider-vesre-15886520889426.png"
+                    alt="reviwspiderman"
+                  />
+                  <p>Review: Spider-Man: Into The Spider-Vesre</p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/covid-19-la-ban-chinh-thuc-cua-mev-1-phim-contagion-2011-15843496198482.jpg"
+                    alt="reviwspiderman"
+                  />
+                  <p>
+                    COVID-19 là bản chính thức của MEV-1 phim contagion (2011)
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/review-sieu-ve-si-so-vo-giai-cuu-tong-thong-chua-bao-gio-lay-loi-va-hai-huoc-den-the-15840925506832.jpg"
+                    alt="reviwspiderman"
+                  />
+                  <p>
+                    [Review] Siêu Vệ Sĩ Sợ Vợ - Giải cứu Tổng thống chưa bao giờ
+                    lầy lội và hài hước đến thế
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/review-bloodshot-mo-man-an-tuong-cho-vu-tru-sieu-anh-hung-valiant-15840731141389.jpg"
+                    alt="reviwspiderman"
+                  />
+                  <p>
+                    [Review] Bloodshot - Mở màn ấn tượng cho Vũ trụ Siêu anh
+                    hùng Valiant
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container fade" id="khuyenmai">
+            <div class="row text-left pb-3">
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/bhd-59k-ve-ca-tuan-16088081864967.jpg"
+                  alt="bhd-59k"
+                />
+                <h5>BHD 59K/VÉ CẢ TUẦN !!!</h5>
+                <p>
+                  Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá
+                  59k/vé khi mua vé trên TIX hoặc Mục Vé Phim trên ZaloPay.
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />1
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-6 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/tix-1k-ve-ngai-chi-gia-ve-16045662877511.jpg"
+                  alt="tix-1k"
+                />
+                <h5>TIX 1K/VÉ NGẠI CHI GIÁ VÉ</h5>
+                <p>
+                  Đồng giá 1k/vé cả tuần tất cả các rạp trên TIX + Nhận thêm 02
+                  voucher thanh toán ZaloPay thả ga
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />1
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+            </div>
+            <div class="row text-left">
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.png"
+                  alt="dong-gia-1k"
+                />
+                <h5>ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX</h5>
+                <p>
+                  ĐỒNG GIÁ 1K/VÉ KHI MUA VÉ QUA TIX Hành trình tìm Ròm và Phúc
+                  chỉ với 1k cả tuần + nhận thêm 02 voucher khi đặt vé qua TIX.
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />4
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div
+                class="col-4 pb-3 d-flex flex-column justify-content-between"
+              >
+                <img
+                  src="./img/news/bhd-star-ve-chi-59-000d-ca-tuan-15937622264546.jpg"
+                  alt="bhd-59k"
+                />
+                <h5>BHD STAR VÉ CHỈ 59.000Đ CẢ TUẦN!</h5>
+                <p>
+                  Tận hưởng Ưu Đãi lên đến 3 VÉ BHD Star mỗi tuần chỉ với giá
+                  59k/vé khi mua vé trên TIX và thanh toán bằng ZaloPay hoặc Mục
+                  Vé Phim trên ZaloPay.
+                </p>
+                <div class="item">
+                  <img src="./img/like.png" alt="like" />0
+                  <img src="./img/comment.png" alt="comment" />0
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/beta-cineplex-tro-lai-voi-hang-loat-uu-dai-lon-15889408112010.png"
+                    alt="beta-cineplex"
+                  />
+                  <p>Beta Cineplex trở lại với hàng loạt ưu đãi lớn</p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/123phim-thu-6-khong-den-toi-uu-dai-huy-diet-11k-ve-anh-trai-yeu-quai-15746757294099.jpg"
+                    alt="11k"
+                  />
+                  <p>
+                    [123Phim] Thứ 6 Không Đen Tối - Ưu đãi huỷ diệt 11k/vé Anh
+                    Tr...
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/123phim-nhap-ma-psm30k-giam-ngay-30k-khi-dat-ve-phap-su-mu-ai-chet-gio-tay-15729439018211.jpg"
+                    alt="psm30k"
+                  />
+                  <p>
+                    [123Phim] NHẬP MÃ 'PSM30K' - Giảm ngay 30k khi đặt vé
+                    Pháp...
+                  </p>
+                </div>
+                <div class="list d-flex">
+                  <img
+                    src="./img/news/mega-gs-mot-doa-hoa-thay-ngan-loi-yeu-15713106082164.jpg"
+                    alt="mega"
+                  />
+                  <p>[Mega GS] Một đoá hoa thay ngàn lời yêu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn mt-5">XEM THÊM</button>
+      </div>
+    </section>
+    <section class="backapp">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="backapp__item">
+              <h2>Ứng dụng tiện lợi dành cho người yêu điện ảnh</h2>
+              <p>
+                Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp
+                và đổi quà hấp dẫn.
+              </p>
+              <button class="btn">App miễn phí - Tải về ngay!</button>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mobile-app">
+              <div class="img-responsive">
+                <img src="./img/mobile.png" class="w-100 d-block" alt="" />
+              </div>
+              <div class="slick__resposive">
+                <div class="your-class">
+                  <div>
+                    <img
+                      src="./img/slide/slide1.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide2.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide3.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide4.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide5.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide6.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide7.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide8.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide9.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide10.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide11.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./img/slide/slide12.jpg"
+                      class="w-100 d-block"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__detail1 pb-5">
+          <div class="row">
+            <div class="col-2">
+              <div class="footer__top-item">
+                <h4>TIX</h4>
+                <p class="footer__item-title mb-0">
+                  <a href="#">FAQ</a>
+                </p>
+                <p class="footer__item-title mb-0">
+                  <a href="#">Brand Guidelines</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="footer__top-item">
+                <h4>&nbsp;</h4>
+
+                <p class="footer__item-title mb-0">
+                  <a href="#">Thỏa thuận sử dụng</a>
+                </p>
+                <p class="footer__item-title mb-0">
+                  <a href="#">Chính sách bảo mật</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="footer__top-item">
+                <h4>ĐỐI TÁC</h4>
+                <div class="row">
+                  <div class="col-12 pl-0">
+                    <a href="">
+                      <img class="rounded-circle" src="./img/cgv.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/bhd.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/galaxycine.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/cinestar.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/lotte.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 pl-0">
+                    <a href="">
+                      <img class="rounded-circle" src="./img/megags.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/bt.jpg" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/dongdacinema.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/TOUCH.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/cnx.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 pl-0">
+                    <a href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/STARLIGHT.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/dcine.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/zalopay_icon.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/payoo.jpg" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/VCB.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 pl-0">
+                    <a href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/AGRIBANK.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img
+                        class="rounded-circle"
+                        src="./img/VIETTINBANK.png"
+                        alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/IVB.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/123go.png" alt=""
+                    /></a>
+                    <a class="ml-3" href="">
+                      <img class="rounded-circle" src="./img/laban.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 footer__top-item">
+              <h4>Mobile App</h4>
+              <p class="footer__item-title mb-0">
+                <a href="#">
+                  <img class="m-1" src="./img/apple-logo.png " alt="" />
+                </a>
+                <a href="#">
+                  <img class="m-1" src="./img/android-logo.png" alt="" />
+                </a>
+              </p>
+            </div>
+            <div class="col-2 footer__top-item">
+              <h4>Social</h4>
+              <p class="footer__item-title mb-0">
+                <a href="#">
+                  <img class="m-1" src="./img/facebook-logo.png" alt="" />
+                </a>
+                <a href="#">
+                  <img class="m-1" src="./img/zalo-logo.png" alt="" />
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="footer__detail2">
+            <div class="row mt-5">
+              <div class="col-1">
+                <img src="./img/zion-logo.jpg" alt="" />
+              </div>
+              <div class="col-9">
+                <p>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
+                <p>
+                  Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp.
+                  Hồ Chí Minh, Việt Nam.
+                </p>
+                <p>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</p>
+                <p>
+                  đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở
+                  kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
+                </p>
+                <p>Số Điện Thoại (Hotline): 1900 545 436</p>
+                <p>Email: <span style="color: red">support@tix.vn</span></p>
+              </div>
+              <div class="col-2">
+                <div class="img-2">
+                  <img
+                    src="./img/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end new -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./slick.min.js"></script>
+    <script>
+      $(".your-class").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    </script>
+  </body>
 </html>
