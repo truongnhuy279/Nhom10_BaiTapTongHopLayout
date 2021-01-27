@@ -1,0 +1,54 @@
+.backapp {
+  position: relative;
+  background-image: url("../img/backapp.jpg");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__item {
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 20%;
+    h2 {
+      @include Text(30px, $white, 600, 0);
+      line-height: 40px;
+    }
+    p {
+      @include Text(16px, $white, 600, 0);
+      padding: 20px 0;
+    }
+    button {
+      background-color: #fb4226;
+      color: $white;
+      font-weight: 600;
+    }
+  }
+  .mobile-app {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    .img-responsive {
+      position: absolute !important;
+      width: 220px;
+      height: 433px;
+      top: 20%;
+      left: 11%;
+    }
+    .slick__resposive {
+      border-radius: 20px !important;
+      overflow: hidden;
+      .your-class:focus {
+        outline: none;
+      }
+      position: absolute !important;
+      width: 208px;
+      height: 438px;
+      top: 23%;
+      left: 12%;
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+    }
+  }
+}
